@@ -1,0 +1,9 @@
+{
+    "detectors_to_exclude": "naming-convention, assembly, timestamp, too-many-digits",
+    "solc_disable_warnings": false,
+    "exclude_informational": false,
+    "exclude_low": false,
+    "exclude_medium": false,
+    "exclude_high": false,
+    "filter_paths": "mocks|test|script|openzeppelin|solady|diamond-contracts-core"
+}
