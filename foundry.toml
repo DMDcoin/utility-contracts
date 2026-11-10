@@ -1,0 +1,53 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.25"
+evm_version = "london"
+optimizer = true
+optimizer_runs = 800
+via_ir = true
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/"
+]
+
+ignored_warnings_from = ["lib/openzeppelin-foundry-upgrades"]
+
+no_match_coverage = "src/mocks/.*|script/*"
+
+[lint]
+lint_on_build = true
+severity = ["high", "medium", "low", "info", "gas"]
+exclude_lints = [
+    "block-timestamp",
+    "mixed-case-function",
+    "pascal-case-struct",
+    "asm-keccak256",
+]
+
+[fmt]
+line_length = 120
+tab_width = 4
+style = "space"
+bracket_spacing = true
+multiline_func_header = "params_first_multi"
+number_underscore = "thousands"
+wrap_comments = true
+docs_style = "line"
+sort_imports = true
+prefer_compact = "none"
+single_line_imports = true
+
+[rpc_endpoints]
+dmd_mainnet = "https://rpc.bit.diamonds"
+
+[etherscan]
+dmd_mainnet = { key = "123", url = "https://explorer.bit.diamonds/api" }
