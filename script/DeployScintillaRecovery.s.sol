@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: AGPL-3.0-or-later
 pragma solidity 0.8.25;
 
 import { Script } from "forge-std/Script.sol";
@@ -8,7 +8,7 @@ import { Options, Upgrades } from "openzeppelin-foundry-upgrades/Upgrades.sol";
 
 import { ScintillaRecovery } from "../src/ScintillaRecovery.sol";
 
-contract Deploy is Script {
+contract DeployScintillaRecovery is Script {
     function run() external {
         address proxyAdminOwner = 0xDA0da0da0Da0Da0Da0DA00DA0da0da0DA0DA0dA0;
         Options memory opts;
